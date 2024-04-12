@@ -3,9 +3,11 @@ import { useRef, useEffect } from "react";
 import useGetMessages from "../../hooks/useGetMessages";
 import Message from "./Message";
 import MessageSkeleton from "../skeletons/MessageSkeleton";
+import useListenMessages from "../../hooks/useListenMessages";
 
 const Messages = () => {
   const { loading, messages } = useGetMessages();
+  useListenMessages()
   const lastMessageRef = useRef();
   useEffect(() => {
     setTimeout(() => {
@@ -22,9 +24,7 @@ const Messages = () => {
         messages.length > 0 &&
         messages.map((message) => (
           <div key={message._id} ref={lastMessageRef}>
-            <Message
-              message={message}
-            />
+            <Message message={message} />
           </div>
         ))}
     </div>
