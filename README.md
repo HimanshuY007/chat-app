@@ -8,3 +8,5 @@ A real-time chat application built using MERN, Socket.io, TailwindCSS and daisyU
 - Online user status (Socket.io, React Context)
 - Search bar for quick conversation access
 - State Management using Zustand
+
+**Try out the [demo](https://chat-app-i6m9.onrender.com/)**🔥
